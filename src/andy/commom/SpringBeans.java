@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public final class SpringBeans {
 
 	private static final class SpringBeansFactory{
-		public static final ClassPathXmlApplicationContext CONTEXT = new ClassPathXmlApplicationContext("applicationContext.xml");
+		private static final ClassPathXmlApplicationContext CONTEXT = new ClassPathXmlApplicationContext("applicationContext.xml");
 	}
 	
 	public static final ClassPathXmlApplicationContext getInstance(){

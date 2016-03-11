@@ -6,12 +6,11 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
-import andy.commom.SpringBeans;
-
 /**
  * @author Andy<andy_513@163.com>
  */
 public final class RabbitMQChannel {
+	
 	private String host;
 	private int port;
 	private String username;
@@ -53,24 +52,18 @@ public final class RabbitMQChannel {
 	private Connection connection = null;
 	private Channel channel = null;
 	
-	private RabbitMQChannel() {
+	public RabbitMQChannel() {
 		try {
-			connection = factory.newConnection();
-			factory.setHost(host);
-			factory.setPort(port);
-			factory.setUsername(username);
-			factory.setPassword(password);
+			factory.setHost("127.0.0.1");
+			factory.setPort(5672);
 			factory.setAutomaticRecoveryEnabled(true);
+			factory.setNetworkRecoveryInterval(10000);
+//			factory.setThreadFactory(ThreadManager);
+			connection = factory.newConnection();
 			channel = connection.createChannel();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	private static final RabbitMQChannel mc = SpringBeans.getBean(RabbitMQChannel.class);
-	
-	public static final Channel getInstance(){
-		return mc.getChannel();
 	}
 	
 	public Channel getChannel() {
