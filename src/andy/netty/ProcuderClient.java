@@ -26,26 +26,33 @@ public class ProcuderClient {
 	private static void extracted(String ip, int port) {
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 		Bootstrap strap = new Bootstrap();
-		strap.group(workerGroup)
-		.channel(NioSocketChannel.class)
-		.option(ChannelOption.TCP_NODELAY, true)
-		.handler(new ChannelInitializer<SocketChannel>() {
-			@Override
-			protected void initChannel(SocketChannel ch) throws Exception {
-				ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-				ch.pipeline().addLast(new ProtobufDecoder(ChannelProtos.Channel.getDefaultInstance()));
-				ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
-				ch.pipeline().addLast(new ProtobufEncoder());
-				ch.pipeline().addLast(new ProcuderHandler());
-			}
-		});
+		strap.group(workerGroup).channel(NioSocketChannel.class).option(ChannelOption.TCP_NODELAY, true)
+				.handler(new ChannelInitializer<SocketChannel>() {
+					@Override
+					protected void initChannel(SocketChannel ch) throws Exception {
+						/*
+						 * ch.pipeline().addLast(new
+						 * ProtobufVarint32FrameDecoder());
+						 * ch.pipeline().addLast(new
+						 * ProtobufDecoder(ChannelProtos.Channel.
+						 * getDefaultInstance())); ch.pipeline().addLast(new
+						 * ProtobufVarint32LengthFieldPrepender());
+						 * ch.pipeline().addLast(new ProtobufEncoder());
+						 */
+						ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
+						ch.pipeline().addLast(new ProtobufDecoder(ChannelProtos.Channel.getDefaultInstance()));
+						ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
+						ch.pipeline().addLast(new ProtobufEncoder());
+						ch.pipeline().addLast(new ProcuderHandler());
+					}
+				});
 		ChannelFuture future;
 		try {
 			future = strap.connect(ip, port).sync();
 			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		}finally{
+		} finally {
 			workerGroup.shutdownGracefully();
 		}
 	}

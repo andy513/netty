@@ -7,6 +7,7 @@ import andy.commom.Global;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
+import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
@@ -15,6 +16,8 @@ import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
+import io.netty.handler.logging.LogLevel;
+import io.netty.handler.logging.LoggingHandler;
 
 /**
  * @author Andy<andy_513@163.com>
@@ -33,9 +36,12 @@ public class ConsumerServer {
 		ServerBootstrap server = new ServerBootstrap();
 		server.group(parentGroup, childGroup)
 		.channel(NioServerSocketChannel.class)
+		.option(ChannelOption.SO_BACKLOG, 100)
+		.handler(new LoggingHandler(LogLevel.INFO))
 		.childHandler(new ChannelInitializer<SocketChannel>() {
 			@Override
 			protected void initChannel(SocketChannel ch) throws Exception {
+				ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
 				ch.pipeline().addLast(new ProtobufDecoder(ChannelProtos.Channel.getDefaultInstance()));
 				ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
 				ch.pipeline().addLast(new ProtobufEncoder());
@@ -43,7 +49,7 @@ public class ConsumerServer {
 			}
 		});
 		try {
-			ChannelFuture future = server.bind("127.0.0.1", 8080).sync();
+			ChannelFuture future = server.bind(8080).sync();
 			logger.info("当前服务器数量" + Global.cpu_size + "启动成功:\t请求http:\\\\" + ip + ":" + port + "\\");
 			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
