@@ -28,3 +28,11 @@ main DEBUG commom.Log - 当前登录用户:	Administrator
 main DEBUG commom.Log - Windows 7 6.1 amd64 4
 main DEBUG commom.Log - Oracle Corporation 1.8.0_45 Java HotSpot(TM) 64-Bit Server VM
 main DEBUG commom.Log - 中文 (中国)	中国	中文	zh	CN
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接开始
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接开始
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\

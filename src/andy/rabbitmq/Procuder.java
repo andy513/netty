@@ -20,17 +20,16 @@ import andy.commom.Messages;
  */
 public final class Procuder {
 
-	private static final ExecutorService es = Executors.newFixedThreadPool(500);
+	private static final ExecutorService es = Executors.newFixedThreadPool(100);
 	
 	private static final ThreadPoolExecutor n_es = new ThreadPoolExecutor(2000, 2000 * 2, 5, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(10000));
 
 	public static void main(String[] args) {
 		for (int i = 0; i < 2000; i++) {
-			final int a = i;
 			n_es.execute(() -> {
-				for (int k = 0; k < 10000; k++) {
+				for (;;) {
 					try {
-						String message = (a + k) + "hello world!hello world!hello world!hello world!hello world!hello world!";
+						String message = "hello world!hello world!hello world!hello world!hello world!hello world!";
 						Procuder.send("queueName", "1", "exchange_key", "", true, message, message);
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -42,6 +41,7 @@ public final class Procuder {
 
 	private static ConnectionFactory factory = new ConnectionFactory();
 	private static Connection connection = null;
+//	private static Channel channel = null;
 
 	static {
 		try {
@@ -49,7 +49,6 @@ public final class Procuder {
 			factory.setPort(Messages.getInt("RabbitMQChannel.PORT"));
 			factory.setAutomaticRecoveryEnabled(true);
 			factory.setNetworkRecoveryInterval(10000);
-			// factory.setThreadFactory(ThreadManager);
 			connection = factory.newConnection(es);
 		} catch (IOException e) {
 			e.printStackTrace();

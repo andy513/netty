@@ -21,7 +21,7 @@ public class Consumer {
 //	public static final RabbitMQChannel MC = SpringBeans.getBean(RabbitMQChannel.class);
 
 	public static void main(String[] args) throws IOException {
-		receive("andy1", "exchange_key", "", "2");
+		receive("queueName", "exchange_key", "", "2");
 	}
 	
 	private static ConnectionFactory factory = new ConnectionFactory();

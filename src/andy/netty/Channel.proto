@@ -1,0 +1,9 @@
+package andy.netty;
+
+option java_package = "andy.netty";
+option java_outer_classname = "ChannelProtos";
+
+message Channel {
+	required int32 id = 1;
+//	required bytes date = 2;
+}
