@@ -1,9 +1,6 @@
 package andy;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import andy.commom.SpringBeans;
-import andy.rabbitmq.RabbitMQChannel;
+import andy.commom.Messages;
 
 /**
  * @author Andy<andy_513@163.com>
@@ -11,9 +8,7 @@ import andy.rabbitmq.RabbitMQChannel;
 public class Test {
 	
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext CONTEXT = new ClassPathXmlApplicationContext("applicationContext.xml");
-		RabbitMQChannel mc = SpringBeans.getBean(RabbitMQChannel.class);
-		System.out.println(mc.getPort());
+        System.out.println(Messages.getInt("RabbitMQChannel.1"));
 	}
 
 }

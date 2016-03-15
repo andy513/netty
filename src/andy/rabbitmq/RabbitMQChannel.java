@@ -1,16 +1,20 @@
 package andy.rabbitmq;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
+import andy.commom.Messages;
+
 /**
  * @author Andy<andy_513@163.com>
  */
 public final class RabbitMQChannel {
-	
+
 	private String host;
 	private int port;
 	private String username;
@@ -46,28 +50,6 @@ public final class RabbitMQChannel {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	private ConnectionFactory factory = new ConnectionFactory();
-	private Connection connection = null;
-	private Channel channel = null;
-	
-	public RabbitMQChannel() {
-		try {
-			factory.setHost("127.0.0.1");
-			factory.setPort(5672);
-			factory.setAutomaticRecoveryEnabled(true);
-			factory.setNetworkRecoveryInterval(10000);
-//			factory.setThreadFactory(ThreadManager);
-			connection = factory.newConnection();
-			channel = connection.createChannel();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public Channel getChannel() {
-		return channel;
 	}
 
 }
