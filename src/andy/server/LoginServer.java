@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
+import com.google.protobuf.ByteString;
+import com.google.protobuf.InvalidProtocolBufferException;
 import com.google.protobuf.Message.Builder;
 
 import andy.entity.UserProtos.UserProto;
@@ -13,12 +15,13 @@ import andy.entity.UserProtos.UserProto;
  */
 public class LoginServer extends BaseServer {
 
-	public Map<Integer,Builder> login(JSONObject jsonObject) {
-		Map<Integer,Builder> map = new HashMap<Integer,Builder>();
-		UserProto.Builder userProto = UserProto.newBuilder();
-		userProto.setPassword("password");
-		userProto.setUsesrname("userName");
-		map.put(100, userProto);
+	public Map<Integer, Builder> login(UserProto userProto) {
+		Map<Integer, Builder> map = new HashMap<Integer, Builder>();
+		logger.info(userProto);
+		UserProto.Builder user_proto_builder = UserProto.newBuilder();
+		user_proto_builder.setPassword("password");
+		user_proto_builder.setUsesrname("userName");
+		map.put(100, user_proto_builder);
 		return map;
 	}
 

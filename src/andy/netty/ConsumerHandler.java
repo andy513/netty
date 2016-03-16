@@ -3,11 +3,10 @@ package andy.netty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.google.protobuf.Message.Builder;
-
 import andy.commom.Cache;
 import andy.entity.Message;
 import andy.entity.MessagesProtos.MessagesProto;
+import andy.entity.UserProtos.LoginProto;
 import andy.entity.UserProtos.UserProto;
 import andy.server.BaseServer;
 import io.netty.channel.Channel;
@@ -36,12 +35,13 @@ public class ConsumerHandler extends ChannelHandlerAdapter {
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		MessagesProto messages = (MessagesProto) msg;
-		logger.info(messages);
 		int id = messages.getId();
 		String key = (id + "").substring(0, 2);
 		Message message = Cache.message_map.get(key);
 		Channel channel = ctx.channel();
-		BaseServer.execute(id,channel, message);
+		LoginProto loginProto = LoginProto.parseFrom(messages.getData());
+		UserProto userProto = loginProto.getUserProto();
+		BaseServer.execute(id, channel, message, userProto);
 	}
 	
 	@Override

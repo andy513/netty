@@ -4,7 +4,6 @@ import andy.entity.MessagesProtos.MessagesProto;
 import andy.entity.UserProtos;
 import andy.entity.UserProtos.LoginProto;
 import andy.entity.UserProtos.UserProto;
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
@@ -26,7 +25,10 @@ public class ProcuderHandler extends ChannelHandlerAdapter {
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		ByteBuf buf = (ByteBuf) msg;
+		MessagesProto messageProto = (MessagesProto) msg;
+		UserProto userProto = UserProtos.UserProto.parseFrom(messageProto.getData());
+		System.out.println(userProto);
+	/*	ByteBuf buf = (ByteBuf) msg;
 		int id = buf.readInt();
 		UserProto.Builder builder = UserProto.newBuilder();
 		int limit = buf.writerIndex();
@@ -35,7 +37,7 @@ public class ProcuderHandler extends ChannelHandlerAdapter {
 		buf.readBytes(bytes);
 		builder.mergeFrom(bytes);
 		System.out.println(id);
-		System.out.println(builder);
+		System.out.println(builder);*/
 	}
 
 }
