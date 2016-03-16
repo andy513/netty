@@ -1,5 +1,6 @@
 package andy.netty;
 
+import andy.entity.MessagesProtos;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -30,17 +31,8 @@ public class ProcuderClient {
 				.handler(new ChannelInitializer<SocketChannel>() {
 					@Override
 					protected void initChannel(SocketChannel ch) throws Exception {
-						/*
-						 * ch.pipeline().addLast(new
-						 * ProtobufVarint32FrameDecoder());
-						 * ch.pipeline().addLast(new
-						 * ProtobufDecoder(ChannelProtos.Channel.
-						 * getDefaultInstance())); ch.pipeline().addLast(new
-						 * ProtobufVarint32LengthFieldPrepender());
-						 * ch.pipeline().addLast(new ProtobufEncoder());
-						 */
 						ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-						ch.pipeline().addLast(new ProtobufDecoder(ChannelProtos.Channel.getDefaultInstance()));
+						ch.pipeline().addLast(new ProtobufDecoder(MessagesProtos.MessagesProto.getDefaultInstance()));
 						ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
 						ch.pipeline().addLast(new ProtobufEncoder());
 						ch.pipeline().addLast(new ProcuderHandler());

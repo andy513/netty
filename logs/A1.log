@@ -36,3 +36,143 @@ main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http
 main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
 main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
 main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 1
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 1
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 1
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 102
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":1}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 103
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":2}
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 100
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":0}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":1}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 102
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 103
+msg: "test"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":2}
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+data: "\n\f\n\004andy\022\004andy"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 成功关闭
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+data: "\n\f\n\004andy\022\004andy"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}

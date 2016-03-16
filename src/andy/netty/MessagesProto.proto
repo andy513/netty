@@ -1,0 +1,9 @@
+package andy.netty;
+
+option java_package = "andy.entity";
+option java_outer_classname = "MessagesProtos";
+
+message MessagesProto {
+	required int32 id = 1;
+	required bytes data = 2;
+}

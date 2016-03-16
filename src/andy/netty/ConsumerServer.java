@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import andy.commom.Global;
+import andy.entity.MessagesProtos;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -30,7 +31,7 @@ public class ConsumerServer {
 		extracted("127.0.0.1", 8080);
 	}
 
-	private static void extracted(String ip, int port) {
+	public static final void extracted(String ip, int port) {
 		EventLoopGroup parentGroup = new NioEventLoopGroup(1);
 		EventLoopGroup childGroup = new NioEventLoopGroup(1);
 		ServerBootstrap server = new ServerBootstrap();
@@ -42,7 +43,7 @@ public class ConsumerServer {
 			@Override
 			protected void initChannel(SocketChannel ch) throws Exception {
 				ch.pipeline().addLast(new ProtobufVarint32FrameDecoder());
-				ch.pipeline().addLast(new ProtobufDecoder(ChannelProtos.Channel.getDefaultInstance()));
+				ch.pipeline().addLast(new ProtobufDecoder(MessagesProtos.MessagesProto.getDefaultInstance()));
 				ch.pipeline().addLast(new ProtobufVarint32LengthFieldPrepender());
 				ch.pipeline().addLast(new ProtobufEncoder());
 				ch.pipeline().addLast(new ConsumerHandler());

@@ -3,7 +3,14 @@ package andy.netty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import andy.netty.ChannelProtos.Channel;
+import com.google.protobuf.Message.Builder;
+
+import andy.commom.Cache;
+import andy.entity.Message;
+import andy.entity.MessagesProtos.MessagesProto;
+import andy.entity.UserProtos.UserProto;
+import andy.server.BaseServer;
+import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 
@@ -13,19 +20,28 @@ import io.netty.channel.ChannelHandlerContext;
 public class ConsumerHandler extends ChannelHandlerAdapter {
 
 	private static final Logger logger = LogManager.getLogger(ConsumerHandler.class);
+	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		logger.info("连接成功");
+//		super.channelActive(ctx);
+	}
+
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+		logger.info("成功关闭");
+//		super.channelInactive(ctx);
+	}
 
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		System.out.println("有什么问题吗?");
-		ChannelProtos.Channel channel = (ChannelProtos.Channel) msg;
-		logger.info(channel);
-		ctx.writeAndFlush(createChannel());
-	}
-	
-	private Channel createChannel(){
-		Channel.Builder builder = Channel.newBuilder();
-		builder.setId(2);
-		return builder.build();
+		MessagesProto messages = (MessagesProto) msg;
+		logger.info(messages);
+		int id = messages.getId();
+		String key = (id + "").substring(0, 2);
+		Message message = Cache.message_map.get(key);
+		Channel channel = ctx.channel();
+		BaseServer.execute(id,channel, message);
 	}
 	
 	@Override

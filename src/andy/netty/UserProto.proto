@@ -1,0 +1,13 @@
+package andy.entty;
+
+option java_package = "andy.entity";
+option java_outer_classname = "UserProtos";
+
+message LoginProto {
+	required UserProto userProto = 1;
+}
+
+message UserProto {
+	required string usesrname = 1;
+	required string password = 2;
+}
