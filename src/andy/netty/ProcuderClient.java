@@ -1,6 +1,9 @@
 package andy.netty;
 
-import andy.entity.MessagesProtos;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import andy.entity.proto.MessagesProtos;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -18,10 +21,15 @@ import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
  * @author Andy<andy_513@163.com>
  */
 public class ProcuderClient {
+	
+	private static final ExecutorService es = Executors.newCachedThreadPool();
 
 	public static void main(String[] args) {
-		extracted("127.0.0.1", 8080);
-
+		for (int i = 0; i < 200; i++) {
+			es.execute(() -> {
+				extracted("127.0.0.1", 8080);
+			});
+		}
 	}
 
 	private static void extracted(String ip, int port) {

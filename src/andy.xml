@@ -3,7 +3,6 @@
   <class id="10" cls="andy.server.LoginServer">
     <method id="100" method="exit"/>
     <method id="101" method="login"/>
-    <method id="102" method="t1"/>
-    <method id="103" method="t2"/>
+    <method id="102" method="joinGame"/>
   </class>
 </andy>

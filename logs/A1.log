@@ -176,3 +176,75 @@ nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
 data: "\n\f\n\004andy\022\004andy"
 
 nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 成功关闭
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+data: "\n\f\n\004andy\022\004andy"
+
+nioEventLoopGroup-1-0 DEBUG server.BaseServer - {"uid":3}
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 成功关闭
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - id: 101
+data: "\n\f\n\004andy\022\004andy"
+
+nioEventLoopGroup-1-0 INFO  server.BaseServer - 发送成功
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  server.BaseServer - 发送成功
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 成功关闭
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 成功关闭
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  server.BaseServer - usesrname: "andy"
+password: "andy"
+
+nioEventLoopGroup-1-0 INFO  server.BaseServer - 发送成功
+main INFO  netty.ConsumerServer - 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8080\
+nioEventLoopGroup-1-0 INFO  netty.ConsumerHandler - 连接成功
+nioEventLoopGroup-1-0 INFO  server.BaseServer - usesrname: "andy"
+password: "andy"
+
+nioEventLoopGroup-1-0 INFO  server.BaseServer - 发送成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f1da57d] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd ) values (?,?,?) 
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f1da57d] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd ) values (?,?,?) 
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f1da57d] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd ) values (?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 9be0f880-92f7-41da-b897-572fdd87da3b(String), andy(String), password(String)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f1da57d] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd ) values(?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: e45abde4-4966-4450-94cf-8c962bbc8b94(String), andy(String), andy(String)
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@f1da57d] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd ) values(?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 92106aec-884f-48fe-814e-fe1b47b98869(String), andy(String), andy(String)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]

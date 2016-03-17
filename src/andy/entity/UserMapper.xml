@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="andy.mapper.UserMapper">
+	<sql id="sel_sql">id, uname, pwd</sql>
+	<sql id="ins_sql">id,uname, pwd</sql>
+
+	<insert id="addUsers" parameterType="List">
+		insert into t_user(
+		<include refid="ins_sql" />
+		) values
+		<foreach collection="list" item="user" separator=",">
+			(#{user.id},#{user.uname},#{user.pwd},#{user.nickName}, #{user.time})
+		</foreach>
+	</insert>
+
+	<insert id="addUser" parameterType="User">
+		insert into t_user(<include refid="ins_sql" />) values(#{id},#{uname},#{pwd})
+	</insert>
+
+	<update id="modifyUsers" parameterType="List">
+		<foreach collection="list" item="user" separator=";">
+			update t_user
+			<set>
+				nickname=#{user.nickName}
+			</set>
+			WHERE id=#{user.id}
+		</foreach>
+	</update>
+
+	<select id="selUser" resultType="User" parameterType="String">
+		SELECT
+		<include refid="sel_sql" />
+		FROM t_user
+		<where>
+			<if test="uname != null">
+				uname = #{uname}
+			</if>
+		</where>
+		limit 1
+	</select>
+
+	<select id="selName" resultType="String" parameterType="String">
+		SELECT
+		<include refid="sel_sql" />
+		FROM t_user where id = #{id}
+	</select>
+</mapper>

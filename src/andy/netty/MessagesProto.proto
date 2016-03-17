@@ -1,9 +1,17 @@
 package andy.netty;
 
-option java_package = "andy.entity";
+option java_package = "andy.entity.proto";
 option java_outer_classname = "MessagesProtos";
 
+/*通信*/
 message MessagesProto {
 	required int32 id = 1;
-	required bytes data = 2;
+	required string open_id = 2 [default = '12345678998765'];
+	required bytes data = 3;
+}
+
+message MessagesResponseProt {
+	required int32 id = 1;
+	required int32 state = 2 [default = 1];
+	required bytes data = 3 [default = ""];
 }

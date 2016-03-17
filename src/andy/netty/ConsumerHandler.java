@@ -5,9 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import andy.commom.Cache;
 import andy.entity.Message;
-import andy.entity.MessagesProtos.MessagesProto;
-import andy.entity.UserProtos.LoginProto;
-import andy.entity.UserProtos.UserProto;
+import andy.entity.proto.MessagesProtos.MessagesProto;
 import andy.server.BaseServer;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerAdapter;
@@ -39,9 +37,7 @@ public class ConsumerHandler extends ChannelHandlerAdapter {
 		String key = (id + "").substring(0, 2);
 		Message message = Cache.message_map.get(key);
 		Channel channel = ctx.channel();
-		LoginProto loginProto = LoginProto.parseFrom(messages.getData());
-		UserProto userProto = loginProto.getUserProto();
-		BaseServer.execute(id, channel, message, userProto);
+		BaseServer.execute(id, channel, message, messages.getData());
 	}
 	
 	@Override
