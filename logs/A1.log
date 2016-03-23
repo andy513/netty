@@ -248,3 +248,348 @@ main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pw
 main DEBUG UserMapper.addUser - ==> Parameters: 92106aec-884f-48fe-814e-fe1b47b98869(String), andy(String), andy(String)
 main DEBUG UserMapper.addUser - <==    Updates: 1
 main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bdeaabb]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	t
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	t
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+Thread-12 DEBUG commom.XMemcache - 更新成功
+Thread-13 DEBUG commom.XMemcache - 更新成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+Thread-12 DEBUG commom.XMemcache - 更新成功
+Thread-13 DEBUG commom.XMemcache - 更新成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+Thread-12 DEBUG commom.XMemcache - 更新成功
+Thread-13 DEBUG commom.XMemcache - 更新成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+Thread-12 DEBUG commom.XMemcache - 更新成功
+Thread-13 DEBUG commom.XMemcache - 更新成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+Thread-12 DEBUG commom.XMemcache - 更新成功
+Thread-13 DEBUG commom.XMemcache - 更新成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 2431
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 1
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG andy.Test - 14
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG andy.Test - 我想看看打印了几次
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+Thread-1 DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+Thread-1 DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+Thread-1 INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+Thread-1 DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+Thread-1 INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+Thread-1 DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+Thread-1 INFO  commom.XMemcache - 缓存添加失败,已有相同KEY存在:	a
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG commom.XMemcache - 缓存删除成功

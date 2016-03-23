@@ -43,8 +43,7 @@
 		<!-- <property name="authInfoMap">
 			<map>
 				<entry key-ref="server1">
-					<bean class="net.rubyeye.xmemcached.auth.AuthInfo"
-						factory-method="typical">
+					<bean class="net.rubyeye.xmemcached.auth.AuthInfo" factory-method="typical">
 						<constructor-arg index="0">
 							<value>root</value>
 						</constructor-arg>
@@ -56,8 +55,18 @@
 			</map>
 		</property> -->
 		<property name="connectionPoolSize" value="${cache.max_connection}" />
+		<!--
+			//使用二进制文件  				BinaryCommandFactory
+			//文本协议					TextCommandFactory
+			Kestrel是twitter开源的一个scala写的简单高效MQ，它支持 memcached文本协议，但是并不完全兼容，例如它不支持flag，导致很多利用flag做序列化的客户端无法正常运作。
+			因此Xmemcached特意提供了KestrelCommandFactory?用于支持Kestrel。
+			使用KestrelCommandFactory?即可拥有如下好处：
+			默认关闭get优化，因为kestrel不支持bulk get；
+			支持kestrel的阻塞获取和可靠获取；
+			允许向kestrel存储任意java序列化类型。设置KestrelCommandFactory:
+		 -->
 		<property name="commandFactory">
-			<bean class="net.rubyeye.xmemcached.command.TextCommandFactory" />
+			<bean class="net.rubyeye.xmemcached.command.BinaryCommandFactory" />
 		</property>
 		<property name="sessionLocator">
 			<bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator" />
@@ -65,6 +74,10 @@
 		<property name="transcoder">
 			<bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder" />
 		</property>
+		<property name="bufferAllocator">
+			<bean class="net.rubyeye.xmemcached.buffer.SimpleBufferAllocator" />
+		</property>
+		<property name="failureMode" value="false"/>
 	</bean>
 	<!-- Use factory bean to build memcached client -->
 	<bean id="memcachedClient" factory-bean="memcachedClientBuilder"

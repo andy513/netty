@@ -17,17 +17,12 @@ public class GlobalUtil {
 
 	private static final AtomicInteger ai = new AtomicInteger();
 
-	public static final String UUID() {
-		return String.format("%010d", ai.getAndIncrement());
-	}
-
 	private static final int ROTATION = 999;
 
-	public static final String New_UID() {
+	public static final String UUID() {
 		if (ai.intValue() >= ROTATION) {
 			ai.set(0);
 		}
-//		System.out.println(ai.intValue());
 		return String.format("%1d%2$03d", System.currentTimeMillis(), ai.getAndIncrement());
 	}
 
@@ -50,7 +45,7 @@ public class GlobalUtil {
 					public Integer call() throws Exception {
 						countDownLatch.countDown();
 						for (int k = 0; k < 100; k++) {
-							sets.add(New_UID());
+							sets.add(UUID());
 						}
 						return sets.size();
 					}

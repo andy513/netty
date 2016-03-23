@@ -1,7 +1,8 @@
 package andy.entity;
 
 import java.io.Serializable;
-import java.util.UUID;
+
+import andy.commom.GlobalUtil;
 
 /**
  * @author Andy<andy_513@163.com>
@@ -19,7 +20,7 @@ public class User implements Serializable {
 	}
 
 	public User(String name, String password) {
-		this.id = UUID.randomUUID().toString();
+		this.id = GlobalUtil.UUID();
 		this.uname = name;
 		this.pwd = password;
 	}
@@ -60,7 +61,9 @@ public class User implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + age;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((uname == null) ? 0 : uname.hashCode());
 		return result;
 	}
 
@@ -73,11 +76,19 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
+		if (age != other.age)
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
+		if (uname == null) {
+			if (other.uname != null)
+				return false;
+		} else if (!uname.equals(other.uname))
+			return false;
 		return true;
 	}
+	
 }

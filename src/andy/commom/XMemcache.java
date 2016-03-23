@@ -2,6 +2,7 @@ package andy.commom;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -44,42 +45,15 @@ public final class XMemcache {
 		return bool;
 	}
 
-	/*
-	 * public static final boolean add(Integer key, Object value) { return
-	 * add(key + "", value); }
-	 */
-
-	public static final boolean set(String key, Object value) throws TimeoutException, InterruptedException, MemcachedException {
-		/*
-		 * GetsResponse<Object> cas_value = XMEMCACHED.gets(key); if (cas_value
-		 * == null) { return XMEMCACHED.add(key, 0, value); } boolean bool =
-		 * XMEMCACHED.cas(key, 0, new CASOperation<Object>() {
-		 * 
-		 * @Override public int getMaxTries() { return 5; }
-		 * 
-		 * @Override public Object getNewValue(long currentCAS, Object
-		 * currentValue) { return value; } }); if (!bool)
-		 * logger.info("缓存更新失败:\t" + key + "\t" + value);
-		 */
-		boolean bool = false;
-		try {
-			lock.lock();
-			bool = XMEMCACHED.set(key, 0, value);
-		} finally {
-			lock.unlock();
-		}
-		return bool;
-	}
-
-	public static final boolean set(int key, Object value) throws TimeoutException, InterruptedException, MemcachedException {
-		return set(key + "", value);
+	private static final boolean set(String key, Object value) throws TimeoutException, InterruptedException, MemcachedException {
+		TimeUnit.SECONDS.sleep(10);
+		return XMEMCACHED.set(key, 0, value);
 	}
 
 	public static final <T> T get(String key) {
 		try {
 			return XMEMCACHED.get(key);
 		} catch (TimeoutException | InterruptedException | MemcachedException e) {
-			// logger.error("获取缓存失败:\t" + key);
 			e.printStackTrace();
 		}
 		return null;
@@ -112,54 +86,46 @@ public final class XMemcache {
 		}
 	}
 
-	/*
-	 * public static final <T> void addListT(List<T> lists, String key) {
-	 * addT(lists, key, true); }
-	 * 
-	 * public static final <T> void modifyListT(List<T> lists, String key) {
-	 * addT(lists, key, false); }
-	 */
-
 	private static final <T> boolean addT(T t, String key, boolean bool) throws TimeoutException, InterruptedException, MemcachedException {
-		lock.lock();
 		boolean result = false;
-		try {
-			List<T> lists = null;
-			if (t instanceof List) {
-				lists = (List<T>) t;
-			} else {
-				lists = new ArrayList<T>();
-				lists.add(t);
-			}
-			result = add(lists, key, bool);
-		} finally {
-			lock.unlock();
+		List<T> lists = null;
+		if (t instanceof List) {
+			lists = (List<T>) t;
+		} else {
+			lists = new ArrayList<T>();
+			lists.add(t);
 		}
+		result = add(lists, key, bool);
 		return result;
 	}
 
 	private static final <T> boolean add(List<T> lists, String key, boolean bool) throws TimeoutException, InterruptedException, MemcachedException {
-		List<T> ts = get(key);
-		if (ts == null) {
-			return set(key, lists);
-		} else {
-			if (bool) {
-				ts.addAll(lists);
+		lock.lock();
+		try {
+			List<T> ts = get(key);
+			if (ts == null) {
+				return set(key, lists);
 			} else {
-				int max_size = ts.size();
-				int min_size = lists.size();
-				for (int i = 0; i < max_size; i++) {
-					T ti = ts.get(i);
-					for (int j = 0; j < min_size; j++) {
-						T tj = lists.get(j);
-						if (ti.equals(tj)) {
-							ts.set(i, tj);
-							break;
+				if (bool) {
+					ts.addAll(lists);
+				} else {
+					int max_size = ts.size();
+					int min_size = lists.size();
+					for (int i = 0; i < max_size; i++) {
+						T ti = ts.get(i);
+						for (int j = 0; j < min_size; j++) {
+							T tj = lists.get(j);
+							if (ti.equals(tj)) {
+								ts.set(i, tj);
+								break;
+							}
 						}
 					}
 				}
+				return set(key, ts);
 			}
-			return set(key, ts);
+		} finally {
+			lock.unlock();
 		}
 	}
 
