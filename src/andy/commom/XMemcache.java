@@ -2,7 +2,6 @@ package andy.commom;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -46,15 +45,17 @@ public final class XMemcache {
 	}
 
 	private static final boolean set(String key, Object value) throws TimeoutException, InterruptedException, MemcachedException {
-		TimeUnit.SECONDS.sleep(10);
 		return XMEMCACHED.set(key, 0, value);
 	}
 
 	public static final <T> T get(String key) {
+		lock.lock();
 		try {
 			return XMEMCACHED.get(key);
 		} catch (TimeoutException | InterruptedException | MemcachedException e) {
 			e.printStackTrace();
+		}finally{
+			lock.unlock();
 		}
 		return null;
 	}

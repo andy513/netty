@@ -20,10 +20,8 @@ public class UserBizImpl implements UserBiz {
 	@Override
 	public int addUser(User user) {
 		User old_user = userDao.selUser(user.getUname());
-		synchronized (old_user) {
-			if (old_user == null) {
-				return userDao.addUser(user);
-			}
+		if (old_user == null) {
+			return userDao.addUser(user);
 		}
 		return 0;
 	}

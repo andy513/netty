@@ -1,6 +1,9 @@
 package andy.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 import andy.commom.GlobalUtil;
 
@@ -14,6 +17,9 @@ public class User implements Serializable {
 	private String id;
 	private String uname;
 	private String pwd;
+	private LocalDate date;
+	private LocalTime time;
+	private LocalDateTime dateTime;
 	private int age;
 
 	public User() {
@@ -23,6 +29,34 @@ public class User implements Serializable {
 		this.id = GlobalUtil.UUID();
 		this.uname = name;
 		this.pwd = password;
+		setAge(9);
+		setDate(LocalDate.now());
+		setTime(LocalTime.now());
+		setDateTime(LocalDateTime.now());
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+	public LocalTime getTime() {
+		return time;
+	}
+
+	public void setTime(LocalTime time) {
+		this.time = time;
+	}
+
+	public LocalDateTime getDateTime() {
+		return dateTime;
+	}
+
+	public void setDateTime(LocalDateTime dateTime) {
+		this.dateTime = dateTime;
 	}
 
 	public int getAge() {
@@ -61,9 +95,7 @@ public class User implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + age;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((uname == null) ? 0 : uname.hashCode());
 		return result;
 	}
 
@@ -76,19 +108,12 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (age != other.age)
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (uname == null) {
-			if (other.uname != null)
-				return false;
-		} else if (!uname.equals(other.uname))
-			return false;
 		return true;
 	}
-	
+
 }
