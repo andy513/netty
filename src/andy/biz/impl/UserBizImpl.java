@@ -3,7 +3,10 @@ package andy.biz.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.alibaba.fastjson.JSONObject;
+
 import andy.biz.UserBiz;
+import andy.commom.SpringBeans;
 import andy.dao.UserDao;
 import andy.entity.User;
 
@@ -33,6 +36,14 @@ public class UserBizImpl implements UserBiz {
 			return user;
 		}
 		return null;
+	}
+	
+	public static void main(String[] args) {
+		UserBiz userBiz = SpringBeans.getBean(UserBizImpl.class);
+		User user = new User("hello7", "world7");
+		userBiz.addUser(user);
+		user = userBiz.selUser(user.getUname(), user.getPwd());
+		System.out.println(JSONObject.toJSONString(user));
 	}
 
 }

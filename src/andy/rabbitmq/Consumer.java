@@ -18,8 +18,6 @@ import andy.commom.Messages;
  */
 public class Consumer {
 
-//	public static final RabbitMQChannel MC = SpringBeans.getBean(RabbitMQChannel.class);
-
 	public static void main(String[] args) throws IOException {
 		receive("queueName", "exchange_key", "", "2");
 	}
@@ -31,11 +29,11 @@ public class Consumer {
 
 	static {
 		try {
-			factory.setHost(Messages.getString("RabbitMQChannel.0")); //$NON-NLS-1$
+			factory.setHost(Messages.getString("RabbitMQChannel.0"));
 			factory.setPort(Messages.getInt("RabbitMQChannel.PORT"));
+			//设置断线重连
 			factory.setAutomaticRecoveryEnabled(true);
 			factory.setNetworkRecoveryInterval(10000);
-			// factory.setThreadFactory(ThreadManager);
 			connection = factory.newConnection(es);
 			channel = connection.createChannel();
 		} catch (IOException e) {

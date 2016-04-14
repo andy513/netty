@@ -25,7 +25,7 @@ public class ProcuderClient {
 	private static final ExecutorService es = Executors.newCachedThreadPool();
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 200; i++) {
+		for (int i = 0; i < 2; i++) {
 			es.execute(() -> {
 				extracted("127.0.0.1", 8080);
 			});

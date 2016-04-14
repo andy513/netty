@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.concurrent.ThreadLocalRandom;
 
 import andy.commom.GlobalUtil;
 
@@ -29,7 +30,7 @@ public class User implements Serializable {
 		this.id = GlobalUtil.UUID();
 		this.uname = name;
 		this.pwd = password;
-		setAge(9);
+		setAge(ThreadLocalRandom.current().nextInt(100));
 		setDate(LocalDate.now());
 		setTime(LocalTime.now());
 		setDateTime(LocalDateTime.now());
