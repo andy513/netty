@@ -25,6 +25,17 @@ public class User implements Serializable {
 
 	public User() {
 	}
+	
+	public User(String id, String uname, String pwd) {
+		setId(id);
+		setUname(uname);
+		setPwd(pwd);
+		setAge(ThreadLocalRandom.current().nextInt(100));
+		setDate(LocalDate.now());
+		setTime(LocalTime.now());
+		setDateTime(LocalDateTime.now());
+	}
+
 
 	public User(String name, String password) {
 		this.id = GlobalUtil.UUID();
