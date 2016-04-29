@@ -889,3 +889,170 @@ main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,
 main DEBUG UserMapper.selUser - ==> Parameters: a643(String)
 main DEBUG UserMapper.selUser - <==      Total: 1
 main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@119cbf96]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42a15bdc] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@1a72a540] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello(String)
+main DEBUG UserMapper.selUser - <==      Total: 0
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42a15bdc]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@409c54f] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@1a72a540] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd,date,time,dateTime,age ) values(?,?,?,?,?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 14606268905510000(String), hello(String), world(String), 2016-04-14(Date), 17:41:30(Time), 2016-04-14 17:41:30.595(Timestamp), 9(Integer)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@409c54f]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello1(String)
+main DEBUG UserMapper.selUser - <==      Total: 0
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2141a12] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd,date,time,dateTime,age ) values(?,?,?,?,?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 14606270077590000(String), hello1(String), world1(String), 2016-04-14(Date), 17:43:27(Time), 2016-04-14 17:43:27.773(Timestamp), 9(Integer)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2141a12]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello1(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20435c40] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello1(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20435c40]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 0
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2141a12] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd,date,time,dateTime,age ) values(?,?,?,?,?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 14606273360020000(String), hello6(String), world6(String), 2016-04-14(Date), 17:48:56(Time), 2016-04-14 17:48:56.016(Timestamp), 9(Integer)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2141a12]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225129c] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225129c]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20435c40] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@20435c40]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@c7045b9] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6986852]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41d426b5] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@67304a40] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41d426b5]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello6(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 0
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ebf0f36] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@18920cc] will not be managed by Spring
+main DEBUG UserMapper.addUser - ==>  Preparing: insert into t_user( id,uname, pwd,date,time,dateTime,age ) values(?,?,?,?,?,?,?) 
+main DEBUG UserMapper.addUser - ==> Parameters: 14606294936450000(String), hello7(String), world7(String), 2016-04-14(Date), 18:24:53(Time), 2016-04-14 18:24:53.66(Timestamp), 9(Integer)
+main DEBUG UserMapper.addUser - <==    Updates: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ebf0f36]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5]
+main DEBUG logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@115667d]
+main DEBUG spring.SqlSessionUtils - Creating a new SqlSession
+main DEBUG spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5] was not registered for synchronization because synchronization is not active
+main DEBUG transaction.SpringManagedTransaction - JDBC Connection [org.mariadb.jdbc.MySQLConnection@44b3606b] will not be managed by Spring
+main DEBUG UserMapper.selUser - ==>  Preparing: SELECT id, uname, pwd,date,time,dateTime,age FROM t_user WHERE uname = ? limit 1 
+main DEBUG UserMapper.selUser - ==> Parameters: hello7(String)
+main DEBUG UserMapper.selUser - <==      Total: 1
+main DEBUG spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6492fab5]

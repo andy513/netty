@@ -72,6 +72,7 @@ public class RedisClientTemplate<T> {
 	}
 	
 	public static final <T> T getMapValue(String key,Object mkey,Class<T> cls){
+		System.out.println(shardedJedis.type(key));
 		String string = shardedJedis.hget(key, String.valueOf(mkey));
 		return JSONObject.parseObject(string, cls);
 	}
@@ -95,16 +96,6 @@ public class RedisClientTemplate<T> {
 			ts.add(t);
 		}
 		return ts;
-	}
-	
-	
-
-	public static final void test() {
-		shardedJedis.lpush("t", JSONObject.toJSONString(new User("1235", "a", "a")));
-		shardedJedis.lpush("t", JSONObject.toJSONString(new User("1237", "b", "b")));
-		shardedJedis.lpush("t", JSONObject.toJSONString(new User("1236", "c", "c")));
-		List<String> lists = shardedJedis.sort("t");
-		System.out.println(lists);
 	}
 
 	public static void main(String[] args) {
