@@ -51,7 +51,7 @@ public class ConsumerServer {
 		});
 		try {
 			ChannelFuture future = server.bind(8080).sync();
-			logger.info("当前服务器数量" + Global.cpu_size + "启动成功:\t请求http:\\\\" + ip + ":" + port + "\\");
+			logger.error("当前服务器数量" + Global.cpu_size + "启动成功:\t请求http:\\\\" + ip + ":" + port + "\\");
 			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();

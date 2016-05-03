@@ -22,18 +22,13 @@ public final class MessagesProtos {
     int getId();
 
     /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
+     * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
      */
     boolean hasOpenId();
     /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
+     * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
      */
-    java.lang.String getOpenId();
-    /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
-     */
-    com.google.protobuf.ByteString
-        getOpenIdBytes();
+    long getOpenId();
 
     /**
      * <code>required bytes data = 3;</code>
@@ -105,10 +100,9 @@ public final class MessagesProtos {
               id_ = input.readInt32();
               break;
             }
-            case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+            case 16: {
               bitField0_ |= 0x00000002;
-              openId_ = bs;
+              openId_ = input.readInt64();
               break;
             }
             case 26: {
@@ -172,45 +166,18 @@ public final class MessagesProtos {
     }
 
     public static final int OPEN_ID_FIELD_NUMBER = 2;
-    private java.lang.Object openId_;
+    private long openId_;
     /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
+     * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
      */
     public boolean hasOpenId() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
+     * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
      */
-    public java.lang.String getOpenId() {
-      java.lang.Object ref = openId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8()) {
-          openId_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>required string open_id = 2 [default = "12345678998765"];</code>
-     */
-    public com.google.protobuf.ByteString
-        getOpenIdBytes() {
-      java.lang.Object ref = openId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        openId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getOpenId() {
+      return openId_;
     }
 
     public static final int DATA_FIELD_NUMBER = 3;
@@ -230,7 +197,7 @@ public final class MessagesProtos {
 
     private void initFields() {
       id_ = 0;
-      openId_ = "12345678998765";
+      openId_ = 12345678998765L;
       data_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
@@ -240,10 +207,6 @@ public final class MessagesProtos {
       if (isInitialized == 0) return false;
 
       if (!hasId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasOpenId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -262,7 +225,7 @@ public final class MessagesProtos {
         output.writeInt32(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getOpenIdBytes());
+        output.writeInt64(2, openId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, data_);
@@ -282,7 +245,7 @@ public final class MessagesProtos {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getOpenIdBytes());
+          .computeInt64Size(2, openId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
@@ -411,7 +374,7 @@ public final class MessagesProtos {
         super.clear();
         id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        openId_ = "12345678998765";
+        openId_ = 12345678998765L;
         bitField0_ = (bitField0_ & ~0x00000002);
         data_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -475,9 +438,7 @@ public final class MessagesProtos {
           setId(other.getId());
         }
         if (other.hasOpenId()) {
-          bitField0_ |= 0x00000002;
-          openId_ = other.openId_;
-          onChanged();
+          setOpenId(other.getOpenId());
         }
         if (other.hasData()) {
           setData(other.getData());
@@ -488,10 +449,6 @@ public final class MessagesProtos {
 
       public final boolean isInitialized() {
         if (!hasId()) {
-          
-          return false;
-        }
-        if (!hasOpenId()) {
           
           return false;
         }
@@ -553,78 +510,34 @@ public final class MessagesProtos {
         return this;
       }
 
-      private java.lang.Object openId_ = "12345678998765";
+      private long openId_ = 12345678998765L;
       /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
+       * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
        */
       public boolean hasOpenId() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
+       * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
        */
-      public java.lang.String getOpenId() {
-        java.lang.Object ref = openId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (bs.isValidUtf8()) {
-            openId_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getOpenId() {
+        return openId_;
       }
       /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
+       * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
        */
-      public com.google.protobuf.ByteString
-          getOpenIdBytes() {
-        java.lang.Object ref = openId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          openId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
-       */
-      public Builder setOpenId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
+      public Builder setOpenId(long value) {
+        bitField0_ |= 0x00000002;
         openId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
+       * <code>optional int64 open_id = 2 [default = 12345678998765];</code>
        */
       public Builder clearOpenId() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        openId_ = getDefaultInstance().getOpenId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>required string open_id = 2 [default = "12345678998765"];</code>
-       */
-      public Builder setOpenIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        openId_ = value;
+        openId_ = 12345678998765L;
         onChanged();
         return this;
       }
@@ -1276,7 +1189,7 @@ public final class MessagesProtos {
     java.lang.String[] descriptorData = {
       "\n\036andy/netty/MessagesProto.proto\022\nandy.n" +
       "etty\"J\n\rMessagesProto\022\n\n\002id\030\001 \002(\005\022\037\n\007ope" +
-      "n_id\030\002 \002(\t:\01612345678998765\022\014\n\004data\030\003 \002(\014" +
+      "n_id\030\002 \001(\003:\01612345678998765\022\014\n\004data\030\003 \002(\014" +
       "\"D\n\024MessagesResponseProt\022\n\n\002id\030\001 \002(\005\022\020\n\005" +
       "state\030\002 \002(\005:\0011\022\016\n\004data\030\003 \002(\014:\000B#\n\021andy.e" +
       "ntity.protoB\016MessagesProtos"

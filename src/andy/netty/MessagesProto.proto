@@ -6,7 +6,7 @@ option java_outer_classname = "MessagesProtos";
 /*通信*/
 message MessagesProto {
 	required int32 id = 1;
-	required string open_id = 2 [default = '12345678998765'];
+	optional int64 open_id = 2 [default = 12345678998765];
 	required bytes data = 3;
 }
 

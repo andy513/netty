@@ -25,11 +25,11 @@ public class ProcuderClient {
 	private static final ExecutorService es = Executors.newCachedThreadPool();
 
 	public static void main(String[] args) {
-		for (int i = 0; i < 2; i++) {
-			es.execute(() -> {
+//		for (int i = 0; i < 2; i++) {
+//			es.execute(() -> {
 				extracted("127.0.0.1", 8080);
-			});
-		}
+//			});
+//		}
 	}
 
 	private static void extracted(String ip, int port) {
