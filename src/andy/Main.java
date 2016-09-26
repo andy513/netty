@@ -4,7 +4,7 @@ import andy.commom.XMLUtil;
 import andy.netty.ConsumerServer;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class Main {
 	

@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 
 /**

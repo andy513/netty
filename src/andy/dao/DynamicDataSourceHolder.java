@@ -1,7 +1,7 @@
 package andy.dao;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class DynamicDataSourceHolder {
 	public static final ThreadLocal<String> holder = new ThreadLocal<String>();

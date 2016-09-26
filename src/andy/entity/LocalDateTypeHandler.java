@@ -11,7 +11,7 @@ import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class LocalDateTypeHandler extends BaseTypeHandler<LocalDate> {
 

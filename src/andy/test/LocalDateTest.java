@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class LocalDateTest {
 

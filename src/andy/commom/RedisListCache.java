@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 import redis.clients.jedis.ShardedJedis;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public final class RedisListCache {
 

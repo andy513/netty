@@ -1,8 +1,10 @@
 package andy.rabbitmq;
 
 import java.io.IOException;
+import java.time.LocalTime;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicLong;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -14,18 +16,20 @@ import com.rabbitmq.client.ShutdownSignalException;
 import andy.commom.Messages;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class Consumer {
 
 	public static void main(String[] args) throws IOException {
+		receive("queueName", "exchange_key", "", "1");
 		receive("queueName", "exchange_key", "", "2");
 	}
 	
 	private static ConnectionFactory factory = new ConnectionFactory();
 	private static Connection connection = null;
 	private static Channel channel = null;
-	private static final ExecutorService es = Executors.newFixedThreadPool(100);
+//	private static final ExecutorService es = Executors.newFixedThreadPool(50);
+	private static final ExecutorService es = Executors.newCachedThreadPool();
 
 	static {
 		try {
@@ -40,6 +44,8 @@ public class Consumer {
 			e.printStackTrace();
 		}
 	}
+	
+	private static final AtomicLong al = new AtomicLong();
 
 	public static void receive(String queueName, String key, String type, String routingkey) throws IOException {
 		try {
@@ -53,7 +59,9 @@ public class Consumer {
 			while (true) {
 				QueueingConsumer.Delivery deliver = consumer.nextDelivery();
 				String string = new String(deliver.getBody());
-				System.out.println(string);
+				if (al.incrementAndGet() % 10000 == 0) {
+					System.out.println(LocalTime.now() + "\t" + string);
+				}
 				channel.basicAck(deliver.getEnvelope().getDeliveryTag(),false);
 			}
 		} catch (ShutdownSignalException | ConsumerCancelledException | InterruptedException e) {

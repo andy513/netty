@@ -4,7 +4,7 @@ import andy.commom.XMemcache;
 import net.rubyeye.xmemcached.GetsResponse;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class XMemcachedTest {
 

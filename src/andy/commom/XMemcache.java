@@ -15,7 +15,7 @@ import net.rubyeye.xmemcached.exception.MemcachedException;
 /**
  * XMemcached缓存帮助类
  * 
- * @author Andy
+ * @author andy
  *
  */
 public final class XMemcache {

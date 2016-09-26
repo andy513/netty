@@ -3,7 +3,7 @@ package andy.test;
 import andy.test.FruitColor.Color;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class Apple {
 	

@@ -3,7 +3,7 @@ package andy.test;
 import java.lang.reflect.Field;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class FruitInfoUtil {
 	public static void getFruitInfo(Class<?> clazz) {

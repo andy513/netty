@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentMap;
 import com.esotericsoftware.reflectasm.MethodAccess;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class Message implements Serializable {
 

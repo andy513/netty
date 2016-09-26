@@ -15,7 +15,7 @@ import andy.commom.XMemcache;
 import andy.entity.User;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class Test {
 

@@ -12,7 +12,7 @@ import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedTypes;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 @MappedTypes(LocalTime.class)
 public class LocalTimeTypeHandler extends BaseTypeHandler<LocalTime> {

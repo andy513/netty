@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import andy.commom.GlobalUtil;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class User implements Serializable {
 

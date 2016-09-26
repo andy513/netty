@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.google.code.yanf4j.util.ConcurrentHashSet;
 
 /**
- * @author Andy<andy_513@163.com>
+ * @author andy<andy_513@163.com>
  */
 public class GlobalUtil {
 
