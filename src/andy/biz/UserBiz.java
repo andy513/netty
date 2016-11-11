@@ -7,10 +7,10 @@ import andy.entity.User;
  *
  */
 public interface UserBiz {
-	
-	int addUser(User user);
-	
-	int modifyUser(User user);
 
-	User selUser(String uname,String pwd);
+	int addUser(User user) throws Exception;
+
+	int modifyUser(User user) throws Exception;
+
+	User selUser(String uname, String pwd) throws Exception;
 }

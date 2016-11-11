@@ -17,40 +17,43 @@ import andy.entity.proto.UserProtos.UserProto;
  * @author andy<andy_513@163.com>
  */
 public class LoginServer extends BaseServer {
-	
+
 	public Map<Integer, Builder> joinGame(ByteString byteString) {
 		Map<Integer, Builder> map = new HashMap<Integer, Builder>();
 		UserProto userProto = null;
 		try {
 			userProto = UserProto.parseFrom(byteString);
-		} catch (InvalidProtocolBufferException e) {
+			User user = new User(userProto.getUsername(), userProto.getPassword());
+			userBiz.addUser(user);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		User user = new User(userProto.getUsername(),userProto.getPassword());
-		userBiz.addUser(user);
 		map.put(100, userProto.toBuilder());
 		return map;
 	}
-	
+
 	public Map<Integer, Builder> login(ByteString byteString) {
 		Map<Integer, Builder> map = new HashMap<Integer, Builder>();
+		User user = null;
 		try {
 			LoginProto loginProto = LoginProto.parseFrom(byteString);
 			UserProto userProto = loginProto.getUserProto();
 			String userName = userProto.getUsername();
 			String password = userProto.getPassword();
-			User user = userBiz.selUser(userName, password);
-			if(user == null){
+			user = userBiz.selUser(userName, password);
+			if (user == null) {
 				logger.debug("用户名或密码错误!");
 			}
 			Cache.session.put(user.getId(), user);
+			UserProto.Builder user_proto_builder = UserProto.newBuilder();
+			user_proto_builder.setPassword("password");
+			user_proto_builder.setUsername("userName");
+			map.put(100, user_proto_builder);
 		} catch (InvalidProtocolBufferException e) {
-			e.printStackTrace();
+			logger.error("玩家查询异常", e);
+		} catch (Exception e) {
+			logger.error("玩家查询异常", e);
 		}
-		UserProto.Builder user_proto_builder = UserProto.newBuilder();
-		user_proto_builder.setPassword("password");
-		user_proto_builder.setUsername("userName");
-		map.put(100, user_proto_builder);
 		return map;
 	}
 

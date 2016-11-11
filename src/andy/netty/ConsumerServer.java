@@ -28,7 +28,7 @@ public class ConsumerServer {
 	private static final Logger logger = LogManager.getLogger(ConsumerServer.class);
 
 	public static void main(String[] args) {
-		extracted("127.0.0.1", 8080);
+		extracted("127.0.0.1", 8888);
 	}
 
 	public static final void extracted(String ip, int port) {
@@ -50,7 +50,7 @@ public class ConsumerServer {
 			}
 		});
 		try {
-			ChannelFuture future = server.bind(8080).sync();
+			ChannelFuture future = server.bind(port).sync();
 			logger.error("当前服务器数量" + Global.cpu_size + "启动成功:\t请求http:\\\\" + ip + ":" + port + "\\");
 			future.channel().closeFuture().sync();
 		} catch (InterruptedException e) {

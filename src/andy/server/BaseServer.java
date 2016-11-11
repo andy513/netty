@@ -33,13 +33,13 @@ public class BaseServer {
 		int index = message.getIndex_map().get(id);
 		String openId = "";
 		MethodAccess method = message.getMethod();
-		if (index != 100) {
+		/*if (index != 100) {
 			User user = Cache.session.get(openId);
 			if (user == null) {
 				logger.info("玩家未登录");
 				channel.writeAndFlush(MessagesProto.newBuilder().setId(1));
 			}
-		}
+		}*/
 		Map<Integer, Builder> builder_map = (Map<Integer, Builder>) method.invoke(message.getObj(), index, byteString);
 		for (Entry<Integer, Builder> builder : builder_map.entrySet()) {
 //			ByteBuf buf = PooledByteBufAllocator.DEFAULT.buffer();

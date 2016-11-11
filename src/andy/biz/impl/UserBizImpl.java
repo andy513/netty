@@ -1,5 +1,7 @@
 package andy.biz.impl;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,16 +20,18 @@ public class UserBizImpl implements UserBiz {
 	UserDao userDao;
 
 	@Override
-	public int addUser(User user) {
+	public int addUser(User user) throws Exception {
 		User old_user = userDao.selUser(user.getUname());
 		if (old_user == null) {
 			return userDao.addUser(user);
 		}
 		return 0;
 	}
+	
+	private static final Logger log = LogManager.getLogger(UserBizImpl.class);
 
 	@Override
-	public User selUser(String uname, String pwd) {
+	public User selUser(String uname, String pwd) throws Exception {
 		User user = userDao.selUser(uname);
 		if (user != null && user.getPwd().equals(pwd)) {
 			return user;
@@ -36,7 +40,7 @@ public class UserBizImpl implements UserBiz {
 	}
 
 	@Override
-	public int modifyUser(User user) {
+	public int modifyUser(User user) throws Exception {
 		int result = userDao.modifyUser(user);
 		return result;
 	}

@@ -8,9 +8,9 @@ import andy.entity.User;
  */
 public interface UserDao {
 
-	int addUser(User user);
-	
-	int modifyUser(User user);
-	
-	User selUser(String uname);
+	int addUser(User user) throws Exception;
+
+	int modifyUser(User user) throws Exception;
+
+	User selUser(String uname) throws Exception;
 }

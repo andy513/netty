@@ -1,0 +1,9 @@
+19:09:22 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-1} inited
+19:09:22 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-2} inited
+19:09:23 ERROR [main] andy.netty.ConsumerServer -> 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8888\
+19:09:48 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 连接成功
+19:10:12 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 玩家未登录
+19:10:21 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 发送成功
+19:10:53 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 成功关闭
+19:11:29 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 连接成功
+19:12:04 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 发送成功

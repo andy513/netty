@@ -5,7 +5,6 @@ import java.util.concurrent.Executors;
 
 import andy.entity.proto.MessagesProtos.MessagesProto;
 import andy.entity.proto.UserProtos;
-import andy.entity.proto.UserProtos.LoginProto;
 import andy.entity.proto.UserProtos.UserProto;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -15,16 +14,20 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class ProcuderHandler extends ChannelHandlerAdapter {
 
-	private static final ExecutorService es = Executors.newFixedThreadPool(100);
+	private static final ExecutorService es = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
 		es.execute(() -> {
 			MessagesProto.Builder builder = MessagesProto.newBuilder();
-			builder.setId(101);
-			UserProtos.LoginProto.Builder loginProto = LoginProto.newBuilder();
+			builder.setId(102);
+			UserProto.Builder userProto = UserProto.newBuilder();
+			userProto.setUsername("andy");
+			userProto.setPassword("andy");
+			builder.setData(userProto.build().toByteString());
+			/*UserProtos.LoginProto.Builder loginProto = LoginProto.newBuilder();
 			loginProto.setUserProto(UserProto.newBuilder().setUsername("andy").setPassword("andy"));
-			builder.setData(loginProto.build().toByteString());
+			builder.setData(loginProto.build().toByteString());*/
 			ctx.writeAndFlush(builder.build());
 		});
 		// System.out.println(101 + ":\t发送成功");
@@ -35,13 +38,6 @@ public class ProcuderHandler extends ChannelHandlerAdapter {
 		MessagesProto messageProto = (MessagesProto) msg;
 		UserProto userProto = UserProtos.UserProto.parseFrom(messageProto.getData());
 		System.out.println(userProto);
-		/*
-		 * ByteBuf buf = (ByteBuf) msg; int id = buf.readInt();
-		 * UserProto.Builder builder = UserProto.newBuilder(); int limit =
-		 * buf.writerIndex(); System.out.println(limit); byte[] bytes = new
-		 * byte[-4]; buf.readBytes(bytes); builder.mergeFrom(bytes);
-		 * System.out.println(id); System.out.println(builder);
-		 */
 	}
 
 }

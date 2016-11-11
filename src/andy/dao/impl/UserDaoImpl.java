@@ -34,7 +34,6 @@ public class UserDaoImpl implements UserDao{
 	public User selUser(String uname) {
 		// DBContextHolder.setDbType(DBContextHolder.DB_TYPE_R);
 		User user = userMapper.selUser(uname);
-		user.setUpdate(false);
 		return user;
 	}
 

@@ -13,7 +13,7 @@ import andy.entity.User;
  * @author andy<andy_513@163.com>
  */
 public class Test1 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		UserBiz userBiz = SpringBeans.getBean(UserBizImpl.class);
 		int num = ThreadLocalRandom.current().nextInt(1000);
 		User user = new User("a" + num, "test");

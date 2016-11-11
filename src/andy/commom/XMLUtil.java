@@ -44,7 +44,7 @@ public final class XMLUtil {
 	public static final void run() {
 		try {
 			XMLUtil x = new XMLUtil();
-			// x.write();
+//			 x.write();
 			x.read_andy();
 		} catch (Exception e) {
 			e.printStackTrace();
