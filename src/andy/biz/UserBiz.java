@@ -9,6 +9,8 @@ import andy.entity.User;
 public interface UserBiz {
 	
 	int addUser(User user);
+	
+	int modifyUser(User user);
 
 	User selUser(String uname,String pwd);
 }

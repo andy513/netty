@@ -10,5 +10,7 @@ public interface UserDao {
 
 	int addUser(User user);
 	
+	int modifyUser(User user);
+	
 	User selUser(String uname);
 }

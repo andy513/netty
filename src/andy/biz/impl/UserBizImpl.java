@@ -3,10 +3,7 @@ package andy.biz.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.alibaba.fastjson.JSONObject;
-
 import andy.biz.UserBiz;
-import andy.commom.SpringBeans;
 import andy.dao.UserDao;
 import andy.entity.User;
 
@@ -37,13 +34,28 @@ public class UserBizImpl implements UserBiz {
 		}
 		return null;
 	}
-	
+
+	@Override
+	public int modifyUser(User user) {
+		int result = userDao.modifyUser(user);
+		return result;
+	}
+
 	public static void main(String[] args) {
-		UserBiz userBiz = SpringBeans.getBean(UserBizImpl.class);
-		User user = new User("hello7", "world7");
-		userBiz.addUser(user);
-		user = userBiz.selUser(user.getUname(), user.getPwd());
-		System.out.println(JSONObject.toJSONString(user));
+		/*UserBiz userBiz = SpringBeans.getBean(UserBizImpl.class);
+		String name = "hello7";
+		User user = new User(name, "world7");
+		int result = userBiz.addUser(user);
+		System.out.println(result + "\t" + JSONObject.toJSONString(user));
+		if (result == 0) {
+			user = userBiz.selUser(name, user.getPwd());
+		}
+		result = userBiz.modifyUser(user);
+		System.out.println(result + "\t" + JSONObject.toJSONString(user));*/
+		User user = new User();
+		System.out.println(user.isUpdate());
+		user.setUname("a");
+		System.out.println(user.isUpdate());
 	}
 
 }

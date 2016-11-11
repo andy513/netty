@@ -23,10 +23,20 @@
 		<foreach collection="list" item="user" separator=";">
 			update t_user
 			<set>
-				nickname=#{user.nickName}
+				uname=#{user.uname}
 			</set>
 			WHERE id=#{user.id}
 		</foreach>
+	</update>
+	
+	<update id="modifyUser" parameterType="User">
+		update t_user
+		<set>
+			uname=#{uname}
+		</set>
+		<where>
+			id=#{id}
+		</where>
 	</update>
 
 	<select id="selUser" resultType="User" parameterType="String">
