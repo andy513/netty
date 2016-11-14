@@ -13,6 +13,8 @@ import andy.entity.User;
  */
 public interface UserMapper {
 	
+	int getUserId();
+	
 	@DataSource("master")
 	int addUsers(List<User> users);
 	

@@ -7,6 +7,8 @@ import andy.entity.User;
  *
  */
 public interface UserBiz {
+	
+	int getUserId() throws Exception;
 
 	int addUser(User user) throws Exception;
 

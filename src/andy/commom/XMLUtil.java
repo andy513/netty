@@ -9,6 +9,8 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
@@ -28,9 +30,7 @@ import andy.server.LoginServer;
  */
 public final class XMLUtil {
 
-	public static void main(String[] args) throws Exception {
-		run();
-	}
+	private static final Logger log = LogManager.getLogger(XMLUtil.class);
 
 	public static void extracted() {
 		String bag = ClassUtils.getPackageName(LoginServer.class);
@@ -44,10 +44,11 @@ public final class XMLUtil {
 	public static final void run() {
 		try {
 			XMLUtil x = new XMLUtil();
-//			 x.write();
+			// x.write();
 			x.read_andy();
+			log.debug("XML加载完成!");
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.debug("XML文件配置有问题.", e);
 		}
 	}
 

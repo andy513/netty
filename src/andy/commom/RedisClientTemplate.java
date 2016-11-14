@@ -101,7 +101,7 @@ public class RedisClientTemplate<T> {
 	public static void main(String[] args) {
 		ConcurrentMap<Integer, User> maps = new ConcurrentHashMap<Integer, User>();
 		for (int i = 0; i < 10; i++) {
-			maps.put(i, new User("" + i, "" + i, "" + i));
+			maps.put(i, new User(i, "" + i, "" + i));
 		}
 		String key = "oo";
 		RedisClientTemplate.set(key, maps);

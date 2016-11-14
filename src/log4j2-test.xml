@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="trace">
+<!-- 
+		
+		monitorInterval="30"参数，其中1800指1800秒
+
+ -->
+<Configuration status="off" monitorInterval="1800">
 	<!--  monitorInterval="5"
 		%m 输出代码中指定的消息；
 		%M 输出打印该条日志的方法名；
@@ -23,7 +28,7 @@
 	</Properties>
 	<Appenders>
 		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="${log_debug_pattern}" />
+			<PatternLayout pattern="${log_debug_pattern1}" />
 		</Console>
 		<File name="log_debug" fileName="${file_name}debug.log" append="false">
 			<PatternLayout pattern="${log_debug_pattern}" />
@@ -53,13 +58,13 @@
 		 </Async> -->
 	</Appenders>
 	<Loggers>
-		<AsyncLogger name="com.tafang" level="trace" includeLocation="true">
+		<!-- <AsyncLogger name="andy" level="trace" includeLocation="true">
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="log_debug" />
 			<AppenderRef ref="log_info" />
 			<AppenderRef ref="log_error" />
-			<!-- <AppenderRef ref="Mail" /> -->
-		</AsyncLogger>
+			<AppenderRef ref="Mail" />
+		</AsyncLogger> -->
 		<Root level="trace" includeLocation="true">
 			<AppenderRef ref="Console" />
 			<AppenderRef ref="log_debug" />

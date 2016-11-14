@@ -13,7 +13,7 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.MessageProperties;
 
-import andy.commom.Messages;
+import andy.commom.PropertiesUtil;
 
 /**
  * @author andy<andy_513@163.com>
@@ -46,8 +46,8 @@ public final class Procuder {
 
 	static {
 		try {
-			String host = Messages.getString("RabbitMQChannel.0");
-			int port = Messages.getInt("RabbitMQChannel.PORT");
+			String host = PropertiesUtil.getString("RabbitMQChannel.0");
+			int port = PropertiesUtil.getInt("RabbitMQChannel.PORT");
 			System.out.println(host + "\t" + port);
 			factory.setHost(host); //$NON-NLS-1$
 			factory.setPort(port);

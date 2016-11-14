@@ -1,5 +1,6 @@
 package andy.server;
 
+import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +25,7 @@ public class LoginServer extends BaseServer {
 		try {
 			userProto = UserProto.parseFrom(byteString);
 			User user = new User(userProto.getUsername(), userProto.getPassword());
+			log.debug(System.nanoTime() + "\t" + Instant.now().getEpochSecond() + "\t" + JSONObject.toJSONString(user));
 			userBiz.addUser(user);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -42,7 +44,7 @@ public class LoginServer extends BaseServer {
 			String password = userProto.getPassword();
 			user = userBiz.selUser(userName, password);
 			if (user == null) {
-				logger.debug("用户名或密码错误!");
+				log.debug("用户名或密码错误!");
 			}
 			Cache.session.put(user.getId(), user);
 			UserProto.Builder user_proto_builder = UserProto.newBuilder();
@@ -50,15 +52,15 @@ public class LoginServer extends BaseServer {
 			user_proto_builder.setUsername("userName");
 			map.put(100, user_proto_builder);
 		} catch (InvalidProtocolBufferException e) {
-			logger.error("玩家查询异常", e);
+			log.error("玩家查询异常", e);
 		} catch (Exception e) {
-			logger.error("玩家查询异常", e);
+			log.error("玩家查询异常", e);
 		}
 		return map;
 	}
 
 	public String exit(JSONObject jsonObject) {
-		logger.debug(jsonObject);
+		log.debug(jsonObject);
 		int i = Integer.parseInt("a");
 		return "退出成功";
 	}

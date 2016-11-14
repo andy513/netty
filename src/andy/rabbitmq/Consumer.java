@@ -13,7 +13,7 @@ import com.rabbitmq.client.ConsumerCancelledException;
 import com.rabbitmq.client.QueueingConsumer;
 import com.rabbitmq.client.ShutdownSignalException;
 
-import andy.commom.Messages;
+import andy.commom.PropertiesUtil;
 
 /**
  * @author andy<andy_513@163.com>
@@ -33,8 +33,8 @@ public class Consumer {
 
 	static {
 		try {
-			factory.setHost(Messages.getString("RabbitMQChannel.0"));
-			factory.setPort(Messages.getInt("RabbitMQChannel.PORT"));
+			factory.setHost(PropertiesUtil.getString("RabbitMQChannel.0"));
+			factory.setPort(PropertiesUtil.getInt("RabbitMQChannel.PORT"));
 			//设置断线重连
 			factory.setAutomaticRecoveryEnabled(true);
 			factory.setNetworkRecoveryInterval(10000);

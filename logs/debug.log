@@ -1,9 +1,32 @@
-19:09:22 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-1} inited
-19:09:22 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-2} inited
-19:09:23 ERROR [main] andy.netty.ConsumerServer -> 当前服务器数量4启动成功:	请求http:\\127.0.0.1:8888\
-19:09:48 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 连接成功
-19:10:12 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 玩家未登录
-19:10:21 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 发送成功
-19:10:53 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 成功关闭
-19:11:29 INFO [nioEventLoopGroup-1-0] andy.netty.ConsumerHandler -> 连接成功
-19:12:04 INFO [nioEventLoopGroup-1-0] andy.server.BaseServer -> 发送成功
+00:25:38 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-1} inited
+00:25:38 INFO [main] com.alibaba.druid.pool.DruidDataSource -> {dataSource-2} inited
+00:25:38 DEBUG [Thread-3] andy.biz.impl.UserBizImpl -> emma0:	玩家数据已存在
+00:25:38 DEBUG [Thread-30] andy.biz.impl.UserBizImpl -> emma7:	玩家数据已存在
+00:25:38 DEBUG [Thread-2] andy.biz.impl.UserBizImpl -> emma0:	玩家数据已存在
+00:25:38 DEBUG [Thread-5] andy.biz.impl.UserBizImpl -> emma1:	玩家数据已存在
+00:25:39 DEBUG [Thread-27] andy.biz.impl.UserBizImpl -> emma6:	玩家数据已存在
+00:25:39 DEBUG [Thread-29] andy.biz.impl.UserBizImpl -> emma7:	玩家数据已存在
+00:25:39 DEBUG [Thread-16] andy.biz.impl.UserBizImpl -> emma3:	玩家数据已存在
+00:25:39 DEBUG [Thread-14] andy.biz.impl.UserBizImpl -> emma3:	玩家数据已存在
+00:25:39 DEBUG [Thread-23] andy.biz.impl.UserBizImpl -> emma5:	玩家数据已存在
+00:25:39 DEBUG [Thread-35] andy.biz.impl.UserBizImpl -> emma8:	玩家数据已存在
+00:25:39 DEBUG [Thread-9] andy.biz.impl.UserBizImpl -> emma2:	玩家数据已存在
+00:25:39 DEBUG [Thread-11] andy.biz.impl.UserBizImpl -> emma2:	玩家数据已存在
+00:25:39 DEBUG [Thread-21] andy.biz.impl.UserBizImpl -> emma5:	玩家数据已存在
+00:25:39 DEBUG [Thread-37] andy.biz.impl.UserBizImpl -> emma9:	玩家数据已存在
+00:25:39 DEBUG [Thread-6] andy.biz.impl.UserBizImpl -> emma1:	玩家数据已存在
+00:25:39 DEBUG [Thread-26] andy.biz.impl.UserBizImpl -> emma6:	玩家数据已存在
+00:25:39 DEBUG [Thread-38] andy.biz.impl.UserBizImpl -> emma9:	玩家数据已存在
+00:25:39 DEBUG [Thread-12] andy.biz.impl.UserBizImpl -> emma2:	玩家数据已存在
+00:25:39 DEBUG [Thread-20] andy.biz.impl.UserBizImpl -> emma4:	玩家数据已存在
+00:25:39 DEBUG [Thread-28] andy.biz.impl.UserBizImpl -> emma6:	玩家数据已存在
+00:25:39 DEBUG [Thread-4] andy.biz.impl.UserBizImpl -> emma0:	玩家数据已存在
+00:25:39 DEBUG [Thread-34] andy.biz.impl.UserBizImpl -> emma8:	玩家数据已存在
+00:25:39 DEBUG [Thread-24] andy.biz.impl.UserBizImpl -> emma5:	玩家数据已存在
+00:25:39 DEBUG [Thread-31] andy.biz.impl.UserBizImpl -> emma7:	玩家数据已存在
+00:25:39 DEBUG [Thread-13] andy.biz.impl.UserBizImpl -> emma3:	玩家数据已存在
+00:25:39 DEBUG [Thread-17] andy.biz.impl.UserBizImpl -> emma4:	玩家数据已存在
+00:25:39 DEBUG [Thread-33] andy.biz.impl.UserBizImpl -> emma8:	玩家数据已存在
+00:25:39 DEBUG [Thread-40] andy.biz.impl.UserBizImpl -> emma9:	玩家数据已存在
+00:25:39 DEBUG [Thread-19] andy.biz.impl.UserBizImpl -> emma4:	玩家数据已存在
+00:25:39 DEBUG [Thread-8] andy.biz.impl.UserBizImpl -> emma1:	玩家数据已存在

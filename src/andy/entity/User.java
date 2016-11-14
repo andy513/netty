@@ -6,8 +6,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.concurrent.ThreadLocalRandom;
 
-import andy.commom.GlobalUtil;
-
 /**
  * @author andy<andy_513@163.com>
  */
@@ -15,7 +13,7 @@ public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private String id;
+	private int id;
 	private String uname;
 	private String pwd;
 	private LocalDate date;
@@ -26,9 +24,9 @@ public class User implements Serializable {
 
 	public User() {
 	}
-	
+
 	public User(String name, String password) {
-		this.id = GlobalUtil.UUID();
+		setId(ID.userId.incrementAndGet());
 		setUname(name);
 		setPwd(password);
 		setAge(ThreadLocalRandom.current().nextInt(100));
@@ -37,7 +35,7 @@ public class User implements Serializable {
 		setDateTime(LocalDateTime.now());
 	}
 
-	public User(String id, String uname, String pwd) {
+	public User(int id, String uname, String pwd) {
 		setId(id);
 		setUname(uname);
 		setPwd(pwd);
@@ -45,23 +43,6 @@ public class User implements Serializable {
 		setDate(LocalDate.now());
 		setTime(LocalTime.now());
 		setDateTime(LocalDateTime.now());
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		User other = (User) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
 	}
 
 	public int getAge() {
@@ -76,10 +57,6 @@ public class User implements Serializable {
 		return dateTime;
 	}
 
-	public String getId() {
-		return id;
-	}
-
 	public String getPwd() {
 		return pwd;
 	}
@@ -90,14 +67,6 @@ public class User implements Serializable {
 
 	public String getUname() {
 		return uname;
-	}
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
 	}
 
 	public boolean isUpdate() {
@@ -119,10 +88,6 @@ public class User implements Serializable {
 		this.dateTime = dateTime;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	public void setPwd(String pwd) {
 		setUpdate(true);
 		this.pwd = pwd;
@@ -140,6 +105,14 @@ public class User implements Serializable {
 
 	public void setUpdate(boolean update) {
 		this.update = update;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 }

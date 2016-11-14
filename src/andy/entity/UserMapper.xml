@@ -4,6 +4,10 @@
 
 	<sql id="sel_sql">id, uname, pwd, date, time, dateTime, age</sql>
 	<sql id="ins_sql">id, uname, pwd, date, time, dateTime, age</sql>
+	
+	<select id="getUserId" resultType="int">
+		select IFNULL(max(id),0) from t_user
+	</select>
 
 	<insert id="addUsers" parameterType="List">
 		insert into t_user(<include refid="ins_sql" />) values

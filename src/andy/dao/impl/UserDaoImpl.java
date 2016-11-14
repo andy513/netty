@@ -1,5 +1,7 @@
 package andy.dao.impl;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Repository;
@@ -15,8 +17,9 @@ public class UserDaoImpl implements UserDao{
 	UserMapper userMapper;
 
 	@Override
-	public int addUser(User user) {
+	public int addUser(User user) throws InterruptedException {
 //		DBContextHolder.setDbType(DBContextHolder.DB_TYPE_RW);
+		TimeUnit.MILLISECONDS.sleep(50);
 		return userMapper.addUser(user);
 	}
 
@@ -35,6 +38,11 @@ public class UserDaoImpl implements UserDao{
 		// DBContextHolder.setDbType(DBContextHolder.DB_TYPE_R);
 		User user = userMapper.selUser(uname);
 		return user;
+	}
+
+	@Override
+	public int getUserId() throws Exception {
+		return userMapper.getUserId();
 	}
 
 }

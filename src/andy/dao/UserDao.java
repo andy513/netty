@@ -7,6 +7,8 @@ import andy.entity.User;
  *
  */
 public interface UserDao {
+	
+	int getUserId() throws Exception;
 
 	int addUser(User user) throws Exception;
 

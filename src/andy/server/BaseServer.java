@@ -12,10 +12,8 @@ import com.google.protobuf.Message.Builder;
 
 import andy.biz.UserBiz;
 import andy.biz.impl.UserBizImpl;
-import andy.commom.Cache;
 import andy.commom.SpringBeans;
 import andy.entity.Message;
-import andy.entity.User;
 import andy.entity.proto.MessagesProtos.MessagesProto;
 import io.netty.channel.Channel;
 
@@ -26,7 +24,7 @@ public class BaseServer {
 	
 	protected static final UserBiz userBiz = SpringBeans.getBean(UserBizImpl.class);
 
-	protected static final Logger logger = LogManager.getLogger(BaseServer.class);
+	protected static final Logger log = LogManager.getLogger(BaseServer.class);
 
 	@SuppressWarnings("unchecked")
 	public static final void execute(int id, Channel channel, Message message,ByteString byteString) {
@@ -48,7 +46,7 @@ public class BaseServer {
 			messageProto.setData(builder.getValue().build().toByteString());
 			channel.writeAndFlush(messageProto.build());
 		}
-		logger.info("发送成功");
+		log.info("发送成功");
 	}
 
 }

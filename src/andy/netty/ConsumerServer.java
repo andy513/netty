@@ -27,10 +27,6 @@ public class ConsumerServer {
 	
 	private static final Logger logger = LogManager.getLogger(ConsumerServer.class);
 
-	public static void main(String[] args) {
-		extracted("127.0.0.1", 8888);
-	}
-
 	public static final void extracted(String ip, int port) {
 		EventLoopGroup parentGroup = new NioEventLoopGroup(1);
 		EventLoopGroup childGroup = new NioEventLoopGroup(1);
